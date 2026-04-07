@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-st-primary text-st-charcoal antialiased font-sans;
+  }
+}
+
+@layer utilities {
+  .reveal-wrapper {
+    @apply opacity-0 translate-y-[40px] transition-all duration-1000 ease-super;
+  }
+  .reveal-active {
+    @apply opacity-100 translate-y-0;
+  }
+  .tracking-super {
+    letter-spacing: 0.4em;
+  }
+  .grayscale-hover {
+    @apply grayscale transition-all duration-1000 ease-super hover:grayscale-0 hover:scale-[1.08];
+  }
+}
